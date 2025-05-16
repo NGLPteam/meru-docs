@@ -1,0 +1,37 @@
+:root {
+  /* typography */
+  --sl-font: "Ilisarniq", "Ilisarniq fallback";
+  --sl-text-6xl: 3.75rem;
+  --sl-text-5xl: 2.875rem;
+  --sl-text-4xl: 1.75rem;
+  --sl-text-3xl: 1.5rem;
+  --sl-text-2xl: 1rem;
+  --sl-line-height: 1.5;
+
+  /* color */
+	--sl-color-accent-low: #006087;
+	--sl-color-accent: #609CB5;
+	--sl-color-accent-high: #D1E7F0;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #E1E1E5;
+	--sl-color-gray-2: #D0D0D6;
+	--sl-color-gray-3: #BCBCC3;
+	--sl-color-gray-4: #76767A;
+	--sl-color-gray-5: #58585C;
+	--sl-color-gray-6: #232324;
+	--sl-color-black: #000000;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #D1E7F0;
+	--sl-color-accent: #609CB5;
+	--sl-color-accent-high: #006087;
+	--sl-color-white: #000000;
+	--sl-color-gray-1: #232324;
+	--sl-color-gray-2: #58585C;
+	--sl-color-gray-3: #76767A;
+	--sl-color-gray-4: #BCBCC3;
+	--sl-color-gray-5: #D0D0D6;
+	--sl-color-gray-6: #E1E1E5;
+	--sl-color-black: #ffffff;
+}

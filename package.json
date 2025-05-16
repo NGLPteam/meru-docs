@@ -1,0 +1,39 @@
+{
+  "name": "src-meru-docs",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": "22.x",
+    "yarn": "4.x"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "types": "astro check",
+    "depcheck": "depcheck",
+    "check": "yarn depcheck && yarn types"
+  },
+  "dependencies": {
+    "@astrojs/node": "^9.2.1",
+    "@astrojs/starlight": "^0.34.3",
+    "@astrojs/vercel": "^8.1.4",
+    "astro": "^5.7.13",
+    "sharp": "^0.34.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "browserslist": "^4.24.5",
+    "browserslist-config-baseline": "^0.4.0",
+    "depcheck": "^1.4.7",
+    "esbuild": "^0.25.4",
+    "esbuild-plugin-browserslist": "^1.0.0",
+    "typescript": "^5.8.3"
+  },
+  "browserslist": [
+    "extends browserslist-config-baseline"
+  ],
+  "packageManager": "yarn@4.9.1"
+}

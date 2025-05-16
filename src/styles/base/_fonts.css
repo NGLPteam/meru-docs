@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Ilisarniq fallback";
+  src: local("Arial");
+  size-adjust: 108%;
+  ascent-override: 130%;
+  descent-override: 45%;
+}
+
+@font-face {
+  font-family: "Ilisarniq";
+  /* must be relative in file directory to get astro to find file correctly */
+  src: url("../../assets/fonts/Ilisarniq-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ilisarniq";
+  src: url("../../assets/fonts/Ilisarniq-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ilisarniq";
+  src: url("../../assets/fonts/Ilisarniq-Demi.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ilisarniq";
+  src: url("../../assets/fonts/Ilisarniq-DemiItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}

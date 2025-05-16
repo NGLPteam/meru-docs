@@ -1,0 +1,14 @@
+ignores: [
+  # included in astro, not missing
+  "astro:*",
+  "vite",
+
+  # required to run `astro check` on the command line
+  "@astrojs/check",
+
+  # peer dependency of @astrojs/check
+  "typescript",
+
+  # browserslist config package; referenced as a string in package.json
+  "browserslist-config-baseline",
+]
