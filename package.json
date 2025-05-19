@@ -9,12 +9,16 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "yarn check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "types": "astro check",
+    "lint": "eslint .",
+    "fix": "yarn fix:js && yarn fix:format",
+    "fix:js": "eslint . --fix",
+    "fix:format": "prettier . --write --cache --log-level warn",
     "depcheck": "depcheck",
-    "check": "yarn depcheck && yarn types"
+    "check": "yarn depcheck && yarn lint && yarn types"
   },
   "dependencies": {
     "@astrojs/node": "^9.2.1",
@@ -25,11 +29,25 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/ts-plugin": "^1.10.4",
+    "@castiron/eslint-config": "1.0.0-beta.2",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
     "browserslist": "^4.24.5",
     "browserslist-config-baseline": "^0.4.0",
     "depcheck": "^1.4.7",
     "esbuild": "^0.25.4",
     "esbuild-plugin-browserslist": "^1.0.0",
+    "eslint": "^9.27.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "globals": "^16.1.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "^5.8.3"
   },
   "browserslist": [

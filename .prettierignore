@@ -1,0 +1,4 @@
+# Ignores files in .gitignore by default
+
+# ignore depcheck
+.depcheckrc

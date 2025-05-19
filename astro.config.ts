@@ -31,7 +31,7 @@ export default defineConfig({
       title: "Meru Docs",
       customCss: [
         // Relative path to your custom CSS file
-        './src/styles/global.css',
+        "./src/styles/global.css",
       ],
       editLink: {
         baseUrl: "https://github.com/NGLPteam/meru-docs/edit/main",

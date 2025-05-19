@@ -11,4 +11,14 @@ ignores: [
 
   # browserslist config package; referenced as a string in package.json
   "browserslist-config-baseline",
+
+  # tsconfig.json references plugins by string name
+  "@astrojs/ts-plugin",
+
+  # .eslintrc.json references config, plugins by string name
+  "globals",
+
+  # prettier references plugins by name
+  "prettier",
+  "prettier-plugin-astro",
 ]
