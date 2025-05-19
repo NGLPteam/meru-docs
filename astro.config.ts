@@ -25,6 +25,7 @@ export default defineConfig({
       : node({
           mode: "standalone",
         }),
+  trailingSlash: "never",
   integrations: [
     starlight({
       title: "Meru Docs",
