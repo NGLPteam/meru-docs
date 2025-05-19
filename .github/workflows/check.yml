@@ -24,20 +24,20 @@ jobs:
       - run: yarn install
       - run: yarn depcheck
 
-  # lint:
-  #   runs-on: ubuntu-latest
-  #   name: "Lint code"
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #     - run: corepack enable
-  #     - uses: actions/setup-node@v4
-  #       with:
-  #         node-version-file: "package.json"
-  #         cache: "yarn"
-  #       env:
-  #         NODE_ENV: development
-  #     - run: yarn install
-  #     - run: yarn lint
+  lint:
+    runs-on: ubuntu-latest
+    name: "Lint code"
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: "package.json"
+          cache: "yarn"
+        env:
+          NODE_ENV: development
+      - run: yarn install
+      - run: yarn lint
 
   types:
     runs-on: ubuntu-latest
