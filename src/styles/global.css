@@ -1,6 +1,8 @@
-@layer app-reset, starlight, app-root, app-base, app-components, layout, page, app-utilities;
+@layer app-reset, starlight, app-root, app-base, app-overrides;
 
-@import "./base/_reset.css" layer(app-reset);
+@import "./_reset.css" layer(app-reset);
 
-@import "./base/_fonts.css" layer(root);
-@import "./base/_root.css" layer(root);
+@import "./_fonts.css" layer(app-root);
+@import "./_root.css" layer(app-root);
+
+@import "./_overrides.css" layer(app-overrides);

@@ -1,0 +1,10 @@
+/* Overrides of Starlight styles */
+.sl-steps {
+  li {
+    padding-block-end: 12px;
+
+    img {
+      margin-block-start: 1lh;
+    }
+  }
+}
