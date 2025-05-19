@@ -58,3 +58,5 @@ Images can be added to `src/assets/` and embedded in Markdown with a relative li
 Static assets, like favicons, can be placed in the `public/` directory.
 
 ### Components
+
+Starlight comes with a number of [built-in components](https://starlight.astro.build/components/using-components/#built-in-components) for use in MDX files. We’ll author additional components as needed.
