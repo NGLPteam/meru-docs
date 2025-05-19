@@ -1,13 +1,8 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import { loadEnv } from "vite";
-import node from "@astrojs/node";
-import vercel from "@astrojs/vercel";
 import browserslist from "browserslist";
 import { resolveToEsbuildTarget } from "esbuild-plugin-browserslist";
-
-const { VERCEL } = loadEnv(process.env.NODE_ENV as string, process.cwd(), "");
 
 const buildTarget = resolveToEsbuildTarget(browserslist());
 
@@ -19,12 +14,6 @@ export default defineConfig({
       target: buildTarget,
     },
   },
-  adapter:
-    VERCEL === "1"
-      ? vercel({})
-      : node({
-          mode: "standalone",
-        }),
   trailingSlash: "never",
   integrations: [
     starlight({

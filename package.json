@@ -21,9 +21,7 @@
     "check": "yarn depcheck && yarn lint && yarn types"
   },
   "dependencies": {
-    "@astrojs/node": "^9.2.1",
     "@astrojs/starlight": "^0.34.3",
-    "@astrojs/vercel": "^8.1.4",
     "astro": "^5.7.13",
     "sharp": "^0.34.1"
   },
