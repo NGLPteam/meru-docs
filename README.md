@@ -4,7 +4,7 @@ Documentation website for Meru, built using [Startlight](https://starlight.astro
 
 [Getting started](#getting-started) |
 [Commands](#commands) |
-[Local development](#local-development) |
+[Local development](#local-development)
 
 ## Local development
 
@@ -25,14 +25,19 @@ yarn dev
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `yarn install`         | Installs dependencies                            |
-| `yarn dev`             | Starts local dev server at `localhost:4321`      |
-| `yarn build`           | Build your production site to `./dist/`          |
-| `yarn preview`         | Preview your build locally, before deploying     |
-| `yarn astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `yarn astro -- --help` | Get help using the Astro CLI                     |
+| Command                | Action                                                     |
+| :--------------------- | :--------------------------------------------------------- |
+| `yarn install`         | Installs dependencies                                      |
+| `yarn dev`             | Starts local dev server at `localhost:4321`                |
+| `yarn build`           | Build your production site to `./dist/`                    |
+| `yarn preview`         | Preview your build locally, before deploying               |
+| `yarn astro ...`       | Run CLI commands like `astro add`, `astro check`           |
+| `yarn astro -- --help` | Get help using the Astro CLI                               |
+| `yarn types`           | `astro check` (check TS types)                             |
+| `yarn check`           | runs lint, depcheck, and types scripts (same as CI action) |
+| `yarn lint`            | lint ts/js files with eslint                               |
+| `yarn fix`             | fix ts/js files with eslint and prettier                   |
+| `yarn depcheck`        | check for unused dependencies                              |
 
 ## Project structure
 
