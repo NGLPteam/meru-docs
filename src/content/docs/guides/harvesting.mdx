@@ -4,7 +4,6 @@ title: Harvesting
 
 import { Aside, Steps, Badge, Card } from "@astrojs/starlight/components";
 
-
 <Aside title="Glossary">
 
 - **Harvesting Sources** - External systems that Meru is harvesting content from. For example, the URL of an OAIPMH feed. The harvesting source record would contain any protocol details or authentication.
@@ -16,7 +15,7 @@ import { Aside, Steps, Badge, Card } from "@astrojs/starlight/components";
 - **Harvesting Attempts** - An individual event where Meru tries to retrieve and process content from a configured harvest source, based on the mappings and settings you've provided.
 
 - **Harvest Records** - Singular flat collection of metadata that could be transformed into one or more entities in Meru. An OAIPMH feed typically doesn’t expose the full hierarchical structure of journal content. It doesn’t tell us the Journal → the volume → the issue → and the article. We just get the article and have to infer the hierarchy. A single harvest record can lead to multiple entities getting created in Meru.
-</Aside>
+  </Aside>
 
 ## Access Harvesting Dashboard
 
@@ -25,17 +24,17 @@ import { Aside, Steps, Badge, Card } from "@astrojs/starlight/components";
 1. Log in to the Meru Admin.
 2. To get to the harvesting dashboard, go to **Manage** in the main navigation and click on **Harvesting**.
 
-    <Badge text="Note" variant="note" /> _The harvesting UI is only available to users with `global_admin` privileges._
+   <Badge text="Note" variant="note" /> _The harvesting UI is only available to
+   users with `global_admin` privileges._
 
-3. The main page will show a list of your existing Harvest Sources. You’ll see each source’s  name, number of harvest sets, harvest records, metadata formats, and the source URL.
-</Steps>
+3. The main page will show a list of your existing Harvest Sources. You’ll see each source’s name, number of harvest sets, harvest records, metadata formats, and the source URL.
+   </Steps>
 
 ## Create a New Harvest Source
 
 <Aside title="Required source configuration details">
-    - Source endpoint (the URL)
-    - Harvest protocol (OAI-PMH)
-    - Metadata format (Esploro, Jats, Mets, Mods, or OAIDC)
+  - Source endpoint (the URL) - Harvest protocol (OAI-PMH) - Metadata format
+  (Esploro, Jats, Mets, Mods, or OAIDC)
 </Aside>
 
 <Steps>
@@ -61,48 +60,62 @@ import { Aside, Steps, Badge, Card } from "@astrojs/starlight/components";
 
       </Aside>
 
-
 7. **Mapping options** should be left alone in most cases, unless cic suggests otherwise for a specific source.
 
-    _**Use metadata mappings** allow you to connect specific data patterns to different points in the hierarchy. By default, harvesting sends all data to a single target entity, but data isn’t always organized in the most ideal way. Mappings let you define how certain types of data should be routed, assigning them to the appropriate parent in the tree structure._
+   _**Use metadata mappings** allow you to connect specific data patterns to different points in the hierarchy. By default, harvesting sends all data to a single target entity, but data isn’t always organized in the most ideal way. Mappings let you define how certain types of data should be routed, assigning them to the appropriate parent in the tree structure._
 
-    _Options that are selected will take precedence over what is set elsewhere._
+   _Options that are selected will take precedence over what is set elsewhere._
 
 8. If you would like the default records that can be included per harvest to be different than 80k, set it in the **Max records** field.
 9. Click **Save**.
-</Steps>
+   </Steps>
 
-<Badge text="Note" variant="note" /> _Upon harvest source creation, the endpoint is queried to figure out what the sets are, and this continues at regular intervals to make sure the shape of the sets are up to date. These act as a useful reference to use when adding sets to [mappings](#create-a-harvest-mapping) and [attempts](#create-a-harvest-attempt)._
+<Badge text="Note" variant="note" /> _Upon harvest source creation, the endpoint
+is queried to figure out what the sets are, and this continues at regular
+intervals to make sure the shape of the sets are up to date. These act as a
+useful reference to use when adding sets to
+[mappings](#create-a-harvest-mapping) and
+[attempts](#create-a-harvest-attempt)._
 
 ## Create a Harvest Mapping
 
 _There may be cases where you want more control over harvesting, such as targeting a specific set and directing it to a different entity within Meru, running a harvest on a custom schedule, or using a single source to populate multiple entities. This is especially useful when you don’t want to harvest the entire source or need greater flexibility in how and when content is imported. In these situations, creating a dedicated harvest mapping is the recommended approach._
 
-<Badge text="Note" variant="note" /> _Harvesting is limited to the set level, you can’t target an individual item within a set._
+<Badge text="Note" variant="note" /> _Harvesting is limited to the set level,
+you can’t target an individual item within a set._
 
 ### Create a New Target Entity
 
 To start a new harvest mapping within a harvest source, you need to manually add an empty parent entity (e.g. journal or series) and new community if necessary.
 
 <Steps>
-    1. Go to your **Collections** tab in the main navigation.
-    2. Click on the **Add collection +** button under the main navigation.
-    3. Add all of the desired details to your new collection (**Community**, **Title**, **Visibility**, **Correct schema**, etc.)
-    4. Once it has been created and saved, go back to **Manage** → **Harvest** → **[Current harvest source]**
+  1. Go to your **Collections** tab in the main navigation. 2. Click on the
+  **Add collection +** button under the main navigation. 3. Add all of the
+  desired details to your new collection (**Community**, **Title**,
+  **Visibility**, **Correct schema**, etc.) 4. Once it has been created and
+  saved, go back to **Manage** → **Harvest** → **[Current harvest source]**
 </Steps>
-    <Badge text="Note" variant="note" /> _Once an entity is created, the harvest process will recognize it and overwrite the existing record during future harvests. However, if the entity is deleted, it will be recreated in the next harvest._
+<Badge text="Note" variant="note" /> _Once an entity is created, the harvest
+process will recognize it and overwrite the existing record during future
+harvests. However, if the entity is deleted, it will be recreated in the next
+harvest._
 
 ### Configure Your Harvest Mapping
+
 Now that you have a target entity, you are ready to create your Harvest Mapping.
+
 <Steps>
-1. Click on **Harvest mapping +.**
-2. In the **Target entity** field, add your newly created entity.
-3. If you want to target a specific set, add it to the **Harvest set** field. (The sets tab on the source has a list of all available sets within this source)
-4. Select the correct **Metadata format** and use the **Mapping template** to customize your metadata if needed.
-5. **Mapping options** that are selected will take precedence over what is set elsewhere (e.g. on the harvest source level)
-6. If you would like the default records that can be included per harvest to be different than 80k, set it in the **Max records** field.
-7. Customize the harvest **Schedule**. This field accepts a cron expression or human-readable expression. Leave blank if attempts should only be triggered manually.
-8. Click **Save**.
+  1. Click on **Harvest mapping +.** 2. In the **Target entity** field, add your
+  newly created entity. 3. If you want to target a specific set, add it to the
+  **Harvest set** field. (The sets tab on the source has a list of all available
+  sets within this source) 4. Select the correct **Metadata format** and use the
+  **Mapping template** to customize your metadata if needed. 5. **Mapping
+  options** that are selected will take precedence over what is set elsewhere
+  (e.g. on the harvest source level) 6. If you would like the default records
+  that can be included per harvest to be different than 80k, set it in the **Max
+  records** field. 7. Customize the harvest **Schedule**. This field accepts a
+  cron expression or human-readable expression. Leave blank if attempts should
+  only be triggered manually. 8. Click **Save**.
 </Steps>
 
 ## Create a Harvest Attempt
@@ -114,42 +127,48 @@ _All harvest attempts are logged and viewable under the **Attempts** tab._
 To create an attempt, start within a harvest source and click either the **Harvest attempt +** or **Harvest mapping +** button at the top right under the navigation.
 
 ### Harvest Attempt
+
 <Steps>
-    1. The harvest source and metadata formats are unchangeable.
-    2. If you'd like to harvest a specific set, select it from the **Harvest set** dropdown.
-    3. In the **Target entity** field, add your newly created journal.
-    4. You can customize your Extraction mapping template if desired.
-    5. If you want to add any additional notes for this attempt, there is a field at the bottom of the page.
-    6. Click **Save**.
+  1. The harvest source and metadata formats are unchangeable. 2. If you'd like
+  to harvest a specific set, select it from the **Harvest set** dropdown. 3. In
+  the **Target entity** field, add your newly created journal. 4. You can
+  customize your Extraction mapping template if desired. 5. If you want to add
+  any additional notes for this attempt, there is a field at the bottom of the
+  page. 6. Click **Save**.
 </Steps>
 
 _After saving the attempt, associated records will begin appearing immediately in the **Records** tab. You’ll also see a **Messages** tab, which captures logs, status updates, and any errors or warnings generated during the harvest process. This provides real-time visibility into how your harvest is progressing and helps identify any issues that need attention._
 
 ### Harvest Mapping
-The harvest is triggered automatically based on the mapping's schedule. In this case, the **harvest source**, **metadata formats**, **set**, and **target entity** are all preset. (See  [Create a Harvest Mapping](#create-a-harvest-mapping))
 
+The harvest is triggered automatically based on the mapping's schedule. In this case, the **harvest source**, **metadata formats**, **set**, and **target entity** are all preset. (See [Create a Harvest Mapping](#create-a-harvest-mapping))
 
 ## Navigate the Harvest Records Tab
 
 _After entities have been successfully harvested and created, their status in the **Records** tab will change from `Pending` to `Active`._
 
 <Steps>
-1. Click on any **Identifier** to view the full details of that individual record.
+  1. Click on any **Identifier** to view the full details of that individual
+  record.
 </Steps>
 
-
-<Badge text="Note" variant="note" />  *Identifiers are external to Meru—they are provided by the source and not generated within the system. You can use them to cross-reference records in your own systems.*
+<Badge text="Note" variant="note" /> *Identifiers are external to Meru—they are
+provided by the source and not generated within the system. You can use them to
+cross-reference records in your own systems.*
 
 <Card title="Details">
 
 This section displays the full raw metadata as received from the source.
 
-<Badge text="Note" variant="note" />  _If an entity is missing expected properties, check the latest harvest attempt’s metadata here to verify whether the data was present in the original source._
+<Badge text="Note" variant="note" /> _If an entity is missing expected
+properties, check the latest harvest attempt’s metadata here to verify whether
+the data was present in the original source._
 
 </Card>
 <Card title="Entities">
 
 This section shows which entities were created in Meru based on the incoming metadata. You can drill down into each level of the hierarchy. Selecting an entity will take you to its **Manage** section, where you can work with that specific item. Admins will also see a list of harvest records associated with the entity within that section.
+
 </Card>
 
 ## Navigate the Messages Tab
@@ -159,15 +178,19 @@ _You’ll find a **Messages** tab available at multiple levels—including the o
 _While Meru allows you to make manual changes, we recommend making corrections and updates in the source system whenever possible. This ensures consistency and avoids discrepancies between harvests. Use the overwrite protection in Meru only when necessary—for example, to preserve manual edits that can’t be reflected in the source._
 
 <Steps>
-1. Use the **Debug** toggle in the top-right corner to control the level of detail displayed.
+  1. Use the **Debug** toggle in the top-right corner to control the level of
+  detail displayed.
 </Steps>
 
 <Card title="Debug on">
-When **Debug** is turned **on**, you’ll see a full stream of processing logs, including detailed updates and any error messages.
+  When **Debug** is turned **on**, you’ll see a full stream of processing logs,
+  including detailed updates and any error messages.
 </Card>
 
 <Card title="Debug off">
-When **Debug** is **off**, the view is filtered to show only key issues—such as errors, fatal errors, and warnings—making it easier to focus on problems that require attention.
+  When **Debug** is **off**, the view is filtered to show only key issues—such
+  as errors, fatal errors, and warnings—making it easier to focus on problems
+  that require attention.
 </Card>
 
 ## Make Changes to Harvested Entities in Meru
@@ -184,4 +207,5 @@ When **Debug** is **off**, the view is filtered to show only key issues—such a
     *This checkbox is not persistent — it must be checked each time you want to allow harvesting to make changes.*
     *This ensures that manual edits are protected by default, and you are explicitly opting in to allow them to be replaced.*
     <Badge text="Note" variant="note" />  _Note that the overwrite setting applies only to the specific entity. If a higher-level entity (like a volume or issue) is locked, harvesting can still proceed and update lower-level entities (like articles) within that hierarchy._
+
 </Steps>
