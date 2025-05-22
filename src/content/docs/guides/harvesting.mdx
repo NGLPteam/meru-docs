@@ -15,7 +15,8 @@ import { Aside, Steps, Badge, Card } from "@astrojs/starlight/components";
 - **Harvesting Attempts** - An individual event where Meru tries to retrieve and process content from a configured harvest source, based on the mappings and settings you've provided.
 
 - **Harvest Records** - Singular flat collection of metadata that could be transformed into one or more entities in Meru. An OAIPMH feed typically doesn’t expose the full hierarchical structure of journal content. It doesn’t tell us the Journal → the volume → the issue → and the article. We just get the article and have to infer the hierarchy. A single harvest record can lead to multiple entities getting created in Meru.
-  </Aside>
+
+</Aside>
 
 ## Access Harvesting Dashboard
 
@@ -28,7 +29,8 @@ import { Aside, Steps, Badge, Card } from "@astrojs/starlight/components";
    users with `global_admin` privileges._
 
 3. The main page will show a list of your existing Harvest Sources. You’ll see each source’s name, number of harvest sets, harvest records, metadata formats, and the source URL.
-   </Steps>
+
+</Steps>
 
 ## Create a New Harvest Source
 
@@ -68,7 +70,8 @@ import { Aside, Steps, Badge, Card } from "@astrojs/starlight/components";
 
 8. If you would like the default records that can be included per harvest to be different than 80k, set it in the **Max records** field.
 9. Click **Save**.
-   </Steps>
+
+</Steps>
 
 <Badge text="Note" variant="note" /> _Upon harvest source creation, the endpoint
 is queried to figure out what the sets are, and this continues at regular
