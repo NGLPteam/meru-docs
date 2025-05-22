@@ -2,10 +2,7 @@
 title: Harvesting
 ---
 
-import { Aside } from "@astrojs/starlight/components";
-import { Steps } from "@astrojs/starlight/components";
-import { Badge } from '@astrojs/starlight/components';
-import { Card } from '@astrojs/starlight/components';
+import { Aside, Steps, Badge, Card } from "@astrojs/starlight/components";
 
 
 <Aside title="Glossary">
@@ -54,7 +51,7 @@ import { Card } from '@astrojs/starlight/components';
 
     _The extraction mapping template defines how to transform source metadata—such as JATS—into a structured entity hierarchy suitable for harvesting. It acts as a bridge between the raw data and the system's expected format._
 
-    _The code editor uses a combination of **XML** and **Liquid** <a href="https://shopify.dev/docs/api/liquid" target="blank" rel="noopener noreferrer"/>. In most cases, the default mapping templates will work without modification. You may only need to customize the template if the source data contains legacy structures or unexpected formatting._
+    _The code editor uses a combination of **XML** and **<a href="https://shopify.dev/docs/api/liquid" target="blank" rel="noopener noreferrer">Liquid</a>**. In most cases, the default mapping templates will work without modification. You may only need to customize the template if the source data contains legacy structures or unexpected formatting._
 
     <Aside title="Reasons the default template may need to be updated">
 
