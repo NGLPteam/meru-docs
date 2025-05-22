@@ -1,7 +1,7 @@
-/* 
+/*
 Designed for cascade layers while still using :where to keep a low specificity for unlayered setups.
 Resources:
-https://www.joshwcomeau.com/css/custom-css-reset/ 
+https://www.joshwcomeau.com/css/custom-css-reset/
 https://github.com/mayank99/reset.css?tab=readme-ov-file
 */
 
@@ -90,10 +90,8 @@ main[tabindex="-1"] {
   text-wrap: balance;
 }
 
-/* Reset list styles without losing accessibility */
 :where(ol, ul) {
-  padding: 0;
-  list-style-type: "";
+  padding-inline-start: 1.2em;
 }
 
 /* Set default underline thickness */
