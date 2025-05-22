@@ -28,7 +28,7 @@ import { Card } from '@astrojs/starlight/components';
 1. Log in to the Meru Admin.
 2. To get to the harvesting dashboard, go to **Manage** in the main navigation and click on **Harvesting**.
 
-    - <Badge text="Note" variant="note" /> _The harvesting UI is only available to users with `global_admin` privileges._
+    <Badge text="Note" variant="note" /> _The harvesting UI is only available to users with `global_admin` privileges._
 
 3. The main page will show a list of your existing Harvest Sources. You’ll see each source’s  name, number of harvest sets, harvest records, metadata formats, and the source URL.
 </Steps>
@@ -36,9 +36,9 @@ import { Card } from '@astrojs/starlight/components';
 ## Create a New Harvest Source
 
 <Aside title="Required source configuration details">
-    - [ ] Source endpoint (the URL)
-    - [ ] Harvest protocol (OAI-PMH)
-    - [ ] Metadata format (Esploro, Jats, Mets, Mods, or OAIDC)
+    - Source endpoint (the URL)
+    - Harvest protocol (OAI-PMH)
+    - Metadata format (Esploro, Jats, Mets, Mods, or OAIDC)
 </Aside>
 
 <Steps>
@@ -47,7 +47,7 @@ import { Card } from '@astrojs/starlight/components';
 3. Add an **Identifier** (all lowercase). This cannot be changed after the source is created and is used to help reference the source.
 4. Add the source URL to the **URL** field.
 5. Select your **Harvest protocol** and **Metadata formats**.
-    - <Badge text="Note" variant="note" /> _These cannot be edited once the harvest source has been saved._
+    <Badge text="Note" variant="note" /> _These cannot be edited once the harvest source has been saved._
 6. Configure your **Extraction mapping template**
 
     Choose one of the default presets available in the **Examples** dropdown.
@@ -58,9 +58,9 @@ import { Card } from '@astrojs/starlight/components';
 
     <Aside title="Reasons the default template may need to be updated">
 
-      - • Adding custom fields (e.g., cover images, extra metadata)
-      - • Addressing incomplete or non-standard source metadata
-      - • Adjusting how Meru interprets or organizes incoming data (e.g., refining the hierarchy or entity relationships)
+      - Adding custom fields (e.g., cover images, extra metadata)
+      - Addressing incomplete or non-standard source metadata
+      - Adjusting how Meru interprets or organizes incoming data (e.g., refining the hierarchy or entity relationships)
 
       </Aside>
 
@@ -81,7 +81,7 @@ import { Card } from '@astrojs/starlight/components';
 
 _There may be cases where you want more control over harvesting, such as targeting a specific set and directing it to a different entity within Meru, running a harvest on a custom schedule, or using a single source to populate multiple entities. This is especially useful when you don’t want to harvest the entire source or need greater flexibility in how and when content is imported. In these situations, creating a dedicated harvest mapping is the recommended approach._
 
-- <Badge text="Note" variant="note" /> _Harvesting is limited to the set level, you can’t target an individual item within a set._
+<Badge text="Note" variant="note" /> _Harvesting is limited to the set level, you can’t target an individual item within a set._
 
 ### Create a New Target Entity
 
@@ -141,13 +141,13 @@ _After entities have been successfully harvested and created, their status in th
 </Steps>
 
 
-- <Badge text="Note" variant="note" />  *Identifiers are external to Meru—they are provided by the source and not generated within the system. You can use them to cross-reference records in your own systems.*
+<Badge text="Note" variant="note" />  *Identifiers are external to Meru—they are provided by the source and not generated within the system. You can use them to cross-reference records in your own systems.*
 
 <Card title="Details">
 
 This section displays the full raw metadata as received from the source.
 
-- <Badge text="Note" variant="note" />  _If an entity is missing expected properties, check the latest harvest attempt’s metadata here to verify whether the data was present in the original source._
+<Badge text="Note" variant="note" />  _If an entity is missing expected properties, check the latest harvest attempt’s metadata here to verify whether the data was present in the original source._
 
 </Card>
 <Card title="Entities">
@@ -166,11 +166,11 @@ _While Meru allows you to make manual changes, we recommend making corrections a
 </Steps>
 
 <Card title="Debug on">
-- When **Debug** is turned **on**, you’ll see a full stream of processing logs, including detailed updates and any error messages.
+When **Debug** is turned **on**, you’ll see a full stream of processing logs, including detailed updates and any error messages.
 </Card>
 
 <Card title="Debug off">
-- When **Debug** is **off**, the view is filtered to show only key issues—such as errors, fatal errors, and warnings—making it easier to focus on problems that require attention.
+When **Debug** is **off**, the view is filtered to show only key issues—such as errors, fatal errors, and warnings—making it easier to focus on problems that require attention.
 </Card>
 
 ## Make Changes to Harvested Entities in Meru
@@ -184,7 +184,7 @@ _While Meru allows you to make manual changes, we recommend making corrections a
 <Steps>
 4. If you want future harvests to overwrite your manual changes, check the box labeled **Allow overwriting?**
 
-    - *This checkbox is not persistent — it must be checked each time you want to allow harvesting to make changes.*
-    - *This ensures that manual edits are protected by default, and you are explicitly opting in to allow them to be replaced.*
-    - <Badge text="Note" variant="note" />  _Note that the overwrite setting applies only to the specific entity. If a higher-level entity (like a volume or issue) is locked, harvesting can still proceed and update lower-level entities (like articles) within that hierarchy._
+    *This checkbox is not persistent — it must be checked each time you want to allow harvesting to make changes.*
+    *This ensures that manual edits are protected by default, and you are explicitly opting in to allow them to be replaced.*
+    <Badge text="Note" variant="note" />  _Note that the overwrite setting applies only to the specific entity. If a higher-level entity (like a volume or issue) is locked, harvesting can still proceed and update lower-level entities (like articles) within that hierarchy._
 </Steps>
