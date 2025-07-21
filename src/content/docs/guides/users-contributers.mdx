@@ -18,7 +18,7 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 1. Log in to the Meru Admin.
 2. To get to the user list, go to **Manage** in the main navigation and click on **Users**.
 
-    <Badge text="Note" variant="note" /> _The user list is visible to all users, but only those with `global_admin` privileges can edit user accounts._
+    <Badge text="Note" variant="note" /> _Only those with `global_admin` privileges can edit user accounts._
 
 
 3. The main page will show a list of all users in your Meru instance. You’ll see each user's name, email address, admin status, and creation date.
@@ -46,16 +46,16 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 
 </Steps>
 
-### Manage Associated Communities
+### Manage Community Access
 
 <Steps>
 
-1. From the main user list, click on the name of the user whose associated communities you’d like to update.
+1. From the main user list, click on the name of the user whose communities you’d like to update.
 2. In the left side of the user dashboard, make sure the **Communities** tab is selected.
 
 </Steps>
 
-#### Add a New Associated Community
+#### Add New Community Access
 
 <Steps>
 
@@ -65,27 +65,27 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 
 </Steps>
 
-#### Update an Existing Associated Community
+#### Update an Existing Community Access
 
 <Steps>
 
 1. Hover over the community name that you would like to update.
-2. To remove the associated community, click on the button with the trash icon, and click **Delete**.
+2. To remove the community, click on the button with the trash icon, and click **Delete**.
 3. To update the role for the user within that community, click on the button with the pencil icon. Select the new role from the dropdown menu and click **Save**.
 4. Click on the community name to navigate to that community's detail page.
 
 </Steps>
 
-### Manage Associated Collections
+### Manage Collection Access
 
 <Steps>
 
-1. From the main user list, click on the name of the user whose associated collections you’d like to update.
+1. From the main user list, click on the name of the user whose collections you’d like to update.
 2. In the left side of the user dashboard, make sure the **Collections** tab is selected.
 
 </Steps>
 
-#### Add a New Associated Collection
+#### Add New Collection Access
 
 <Steps>
 
@@ -95,12 +95,12 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 
 </Steps>
 
-#### Update an Existing Associated Collection
+#### Update an Existing Collection Access
 
 <Steps>
 
 1. Hover over the collection name that you would like to update.
-2. To remove the associated collection, click on the button with the trash icon, and click **Delete**.
+2. To remove the collection access, click on the button with the trash icon, and click **Delete**.
 3. To update the role for the user within that collection, click on the button with the pencil icon. Select the new role from the dropdown menu and click **Save**.
 4. Click on the collection name to navigate to that collection's detail page.
 
@@ -108,16 +108,16 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 
 ---
 
-### Manage Associated Items
+### Manage Items Access
 
 <Steps>
 
-1. From the main user list, click on the name of the user whose associated items you’d like to update.
+1. From the main user list, click on the name of the user whose items you’d like to update.
 2. In the left side of the user dashboard, make sure the **Items** tab is selected.
 
 </Steps>
 
-#### Add a New Associated Item
+#### Add New Item Access
 
 <Steps>
 
@@ -127,12 +127,12 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 
 </Steps>
 
-#### Update an Existing Associated Item
+#### Update an Existing Item Access
 
 <Steps>
 
 1. Hover over the item name that you would like to update.
-2. To remove the associated item, click on the button with the trash icon, and click **Delete**.
+2. To remove the item access, click on the button with the trash icon, and click **Delete**.
 3. To update the role for the user within that item, click on the button with the pencil icon. Select the new role from the dropdown menu and click **Save**.
 4. Click on the item name to navigate to that item's detail page.
 
@@ -140,7 +140,7 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 
 ## Manage Contributors
 
-*Creating, editing, and removing contributors, both individual people and organizations, is done through the Contributors section of the Meru Admin. This section covers the full lifecycle of managing contributor records: creating new contributors, editing contributor details, managing their affiliations and contributions, viewing contributor profiles on the public site, and deleting contributors when needed.*
+*In most cases, contributors are automatically created via the harvesting process and don't need to be added by hand. However, Creating, editing, and removing contributors, both individual people and organizations, can also be done through the Contributors section of the Meru Admin. This section covers the full lifecycle of managing contributor records: creating new contributors, editing contributor details, managing their affiliations and contributions, viewing contributor profiles on the public site, and deleting contributors when needed.*
 
 ### Access Contributor List
 
@@ -179,12 +179,15 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 
 #### View Contributor Detail Page
 
+
 <Steps>
 
 1. In the contributor list, hover over the contributor you want to view.
 2. Click on the button with the diagonally pointing up arrow ↗.
 
 </Steps>
+
+<Badge text="Note" variant="note" /> *This will navigate you out of admin and to the public contributor page on the frontend.*
 
 #### Delete a Contributor
 
@@ -249,8 +252,7 @@ There are two ways to edit a contributor:
 1. In the **Contributors** list, click on the contributor’s name to open their full profile page.
 2. Use the navigation menu on the left to access **Collections** or **Items**.
 3. Hover over the contribution name that you would like to update.
-2. To remove the contribution, click on the button with the trash icon, and click **Delete**.
-3. To update the role and position details for the user within that contribution, click on the button with the pencil icon. Make the desired changes and click **Save**.
-4. Click on the community name to navigate to that community's detail page.
+4. To update the position details for the user within that contribution, click on the button with the pencil icon. Make the desired changes and click **Save**. Role cannot be updated. To change a contributors role on entity, the contribution has to be deleted and a new one created.
+5. Click on the community name to navigate to that community's detail page.
 
 </Steps>
