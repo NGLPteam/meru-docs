@@ -1,0 +1,58 @@
+---
+title: Global Settings
+description: Learn how to edit global settings.
+sidebar:
+  order: 6
+---
+
+import { Steps, Badge } from "@astrojs/starlight/components";
+
+## Edit Global Settings
+
+*Global settings apply to your entire Meru instance under your provider account. This is where you can update the site logo, configure controlled vocabularies, customize the theme, and manage global elements such as the footer.*
+
+### Access Global Settings
+
+<Steps>
+
+1. Log in to the Meru Admin.
+2. To get to the global settings, go to **Manage** in the main navigation and click on **Global settings**.
+
+    <Badge text="Note" variant="note" /> _The global settings are only visible to users with `global_admin` privileges._
+
+
+3. A drawer will open up with all of the global settings fields.
+
+</Steps>
+
+### Global Settings Fields
+
+- **Provider Name** — The name of your provider or organization.
+
+- **Installation Name** — The name of this specific Meru installation.
+
+- **Logo** — Upload a logo to display across your installation. You can upload a file directly or drag and drop one into the field. See the [image uploading guidelines](/reference/image-guide) for sizing recommendations.
+
+- **Logo Settings** — Choose whether the logo should be displayed with or without the installation name.
+
+- **Installation Home Page Copy** — Text that will appear on the installation’s home page, if the installation has multiple communities.
+
+  _**Example:**_
+  _The [Provider Name] Platform, developed by our partner Cast Iron Coding, ingests content from multiple upstream submission and curation systems such as Janeway, OJS, and DSpace..._
+
+- **Controlled Vocabularies** — A section where you configure controlled vocabularies used across your installation.
+
+  - **Contribution Roles** — Select the controlled vocabulary to use for contributor roles. Currently, the only available option is **MARC Relator Codes**.
+
+  - **Default Role** — Select the default role to assign to contributors when a role is not explicitly specified. Options include roles such as **Editor**, **Author**, **Voice Actor**, **Storyteller**, and many more.
+
+- **Color Theme** _(required)_ — Sets the app color theme across all communities. Options: **Blue**, **Gray**, or **Cream**.
+
+- **Font Theme** _(required)_ — Sets the app font theme across all communities. Options: **Ilisarniq**, **Switzer**, or **Sentient**, .
+
+- **Suppress External Links** — When enabled, hides external links in metadata.
+
+- **Footer Description** — The footer description displayed at the bottom of your installation’s pages. This field accepts basic markdown.
+
+- **Copyright Statement** — The copyright information displayed in the footer. Example:
+  **Copyright 2025 Meru**.
