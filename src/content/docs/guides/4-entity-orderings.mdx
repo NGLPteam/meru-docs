@@ -1,0 +1,133 @@
+---
+title: Entity Orderings
+description: Get started with using Meru.
+sidebar:
+  order: 4
+---
+
+import { Steps, Badge, Aside } from "@astrojs/starlight/components";
+
+## Overview
+
+*This guide walks through how to update details for any entity, such as its hierarchical location, titles, visibility, thumbnail, summary, and publish date.*
+
+<Aside title="Glossary">
+
+**Entity** - A generalized term used to refer to collections and items. The structure of these content types may vary depending on the context, and using a single term allows for consistent instructions across different levels of hierarchy.
+
+</Aside>
+
+## Access Entity Details
+
+<Steps>
+
+1. Log in to the Meru Admin.
+2. Using Collections, Items, or search in the main navigation, navigate to the entity that you would like to update.
+3. Once you have the entity open, click on the **Manage** tab under the entity title. Click **Details** in the left menu.
+
+</Steps>
+
+## Update Entity Details
+
+### Update Hierarchical Level of Entity
+
+<Steps>
+
+1. Find the **Parent** field.
+2. To change the parent of the entity, click on **Change**.
+3. The modal will show a list of sibling-level entities to the current parent. You can either navigate to a higher level using the back arrow **←**, or click on the forward arrow **→** next to it to see its children.
+4. When you've found the correct entity, click on it so that it is highlighted with a blue background and click **Save** at the bottom of the modal.
+5. Click **Save** at the bottom of the details page.
+
+</Steps>
+
+<Badge text="Note" variant="note" /> _If an entity isn't able to hold child entities, it will not be selectable. You will still be able to click on the right arrow to view its child entities._
+
+
+### Update Titles
+
+<Steps>
+
+1. Find the **Title** and **Subtitle** fields.
+2. Enter or change the titles to your desired values.
+3. Click **Save** at the bottom of the details page.
+
+</Steps>
+
+### Update Visibility
+
+<Steps>
+
+1. Find **Visibility** on the details page.
+</Steps>
+
+<Badge text="Note" variant="note" /> _This is a required field. The default value is **Visible**._
+
+<Steps>
+2. Select the desired visibility level.
+
+</Steps>
+
+      - **Visible** will make the entity and its children visible to users.
+      - **Hidden** will make the entity and its children invisible to users.
+      - **Limited** will make the entity and its children visible to users during a specified date range. Use the **Visible After** and **Visible Until** date selectors to define the range.
+
+<Steps>
+3. Click **Save** at the bottom of the details page.
+</Steps>
+
+
+### Update DOI
+
+<Steps>
+
+1. Find **DOI** on the details page.
+2. <Badge text="Content WIP" variant="caution" /> _Explain DOI here._ 
+3. Click **Save** at the bottom of the details page.
+
+</Steps>
+
+### Update Images
+
+<Steps>
+
+1. Find the **Thumbnail** / **Hero Image** fields on the details page.
+2. Upload or drag and drop your desired images to the fields. See the [image uploading guidelines](/reference/image-guide) for sizing recommendations.
+3. Click **Save** at the bottom of the details page.
+
+</Steps>
+
+### Update Summary
+
+<Steps>
+
+1. Find the **Summary** field on the details page.
+2. Add summary text.
+3. Click **Save** at the bottom of the details page.
+
+</Steps>
+
+### Update Publish Date
+
+<Steps>
+
+1. Find the **Published** field on the details page.
+2. Add a year to the **Year** field.
+3. If desired, add **Month** and **Day**.
+4. Click **Save** at the bottom of the details page. 
+
+</Steps>
+
+### Update Schema
+
+<Badge text="Note" variant="note" /> _Schema should be set when the entity is harvested._
+
+<Steps>
+
+1. Find the **Schema** section on the details page.
+2. Click on **Change**.
+3. Select the correct schema.
+4. Add any details about the entity's schema to the **About** field.
+5. Click **Save** at the bottom of the details page.
+
+</Steps>
