@@ -2,24 +2,12 @@
 title: Harvesting
 description: Learn how to configure sources, mappings, and attempts to harvest external content into Meru.
 sidebar:
-  order: 5
+  order: 6
 ---
 
-import { Aside, Steps, Badge, Card } from "@astrojs/starlight/components";
+import { Aside, Steps, Badge, Card, LinkCard } from "@astrojs/starlight/components";
 
-<Aside title="Glossary">
-
-- **Harvesting Sources** - External systems that Meru is harvesting content from. For example, the URL of an OAIPMH feed. The harvesting source record would contain any protocol details or authentication.
-
-- **Harvesting Sets** - Collections of content within a harvest source. In OAIPMH that would be a set that was exposed by the feed. They could represent a journal, departments, or grouped content in general.
-
-- **Harvest Mappings** - Define the relationship between the content and the external sources and locations in Meru. They have templating logic that explains how we transform a piece of content or data in the harvested data to what we store in Meru.
-
-- **Harvesting Attempts** - An individual event where Meru tries to retrieve and process content from a configured harvest source, based on the mappings and settings you've provided.
-
-- **Harvest Records** - Singular flat collection of metadata that could be transformed into one or more entities in Meru. An OAIPMH feed typically doesn’t expose the full hierarchical structure of journal content. It doesn’t tell us the Journal → the volume → the issue → and the article. We just get the article and have to infer the hierarchy. A single harvest record can lead to multiple entities getting created in Meru.
-
-</Aside>
+<LinkCard title="Glossary" href="/reference/glossary" />
 
 ## Access Harvesting Dashboard
 
