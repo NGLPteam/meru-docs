@@ -2,14 +2,14 @@
 title: Users & Contributors
 description: Learn how to manage users and contributors.
 sidebar:
-  order: 4
+  order: 7
 ---
 
 import { Steps, Badge } from "@astrojs/starlight/components";
 
 ## Manage Users
 
-*Creating and removing users, as well as assigning administation privileges, is handled through the [Keycloak user dashboard](/guides/keycloak#creating-users), or users can register their own account directly from the Meru login screen. This section focuses on managing users after they've been created—resetting passwords, updating user details, and managing associated communities, collections, or items.*
+_Creating and removing users, as well as assigning administation privileges, is handled through the [Keycloak user dashboard](/guides/2-keycloak#creating-users), or users can register their own account directly from the Meru login screen. This section focuses on managing users after they've been created—resetting passwords, updating user details, and managing associated communities, collections, or items._
 
 ### Access User List
 
@@ -18,8 +18,8 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 1. Log in to the Meru Admin.
 2. To get to the user list, go to **Manage** in the main navigation and click on **Users**.
 
-    <Badge text="Note" variant="note" /> _Only those with `global_admin` privileges can edit user accounts._
-
+   <Badge text="Note" variant="note" /> _Only those with `global_admin`
+   privileges can edit user accounts._
 
 3. The main page will show a list of all users in your Meru instance. You’ll see each user's name, email address, admin status, and creation date.
 
@@ -140,7 +140,7 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 
 ## Manage Contributors
 
-*In most cases, contributors are automatically created via the harvesting process and don't need to be added by hand. However, Creating, editing, and removing contributors, both individual people and organizations, can also be done through the Contributors section of the Meru Admin. This section covers the full lifecycle of managing contributor records: creating new contributors, editing contributor details, managing their affiliations and contributions, viewing contributor profiles on the public site, and deleting contributors when needed.*
+_In most cases, contributors are automatically created via the harvesting process and don't need to be added by hand. However, Creating, editing, and removing contributors, both individual people and organizations, can also be done through the Contributors section of the Meru Admin. This section covers the full lifecycle of managing contributor records: creating new contributors, editing contributor details, managing their affiliations and contributions, viewing contributor profiles on the public site, and deleting contributors when needed._
 
 ### Access Contributor List
 
@@ -161,24 +161,24 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 3. Fill in the required fields: **First name** and **Last name**.
 4. If you would like to upload an image, see the [image uploading guidelines](/reference/image-guide) for sizing recommendations.
 5. Add any additional details:
-    - Title
-    - Affiliation
-    - Email
-    - ORCID Link
-    - Bio
-    - Additional links
+   - Title
+   - Affiliation
+   - Email
+   - ORCID Link
+   - Bio
+   - Additional links
 6. Click **Save**.
 
 </Steps>
 
-<Badge text="Note" variant="note" /> *Here is what those details will look like on the contributer details page:*
+<Badge text="Note" variant="note" /> *Here is what those details will look like
+on the contributer details page:*
 
 ![Screenshot of Credentials tab showing Set Password button](../../../assets/images/contributor-detail.png)
 
 ### Manage Existing Contributors
 
 #### View Contributor Detail Page
-
 
 <Steps>
 
@@ -187,7 +187,8 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 
 </Steps>
 
-<Badge text="Note" variant="note" /> *This will navigate you out of admin and to the public contributor page on the frontend.*
+<Badge text="Note" variant="note" /> *This will navigate you out of admin and to
+the public contributor page on the frontend.*
 
 #### Delete a Contributor
 
@@ -202,8 +203,9 @@ import { Steps, Badge } from "@astrojs/starlight/components";
 #### Edit Contributor Details
 
 There are two ways to edit a contributor:
-- **Quick edit drawer** — *useful for making simple updates to contributor details.*
-- **Full contributor page** — *allows editing details as well as managing collection and item contributions.*
+
+- **Quick edit drawer** — _useful for making simple updates to contributor details._
+- **Full contributor page** — _allows editing details as well as managing collection and item contributions._
 
 **_Quick Edit Drawer_**
 
@@ -238,9 +240,9 @@ There are two ways to edit a contributor:
 3. Click **Create contribution +** at the top right of the page.
 4. Fill in the required field: **Collection**.
 5. Add any additional details:
-    - Role
-    - Role position
-    - Overall position
+   - Role
+   - Role position
+   - Overall position
 6. Click **Save**.
 
 </Steps>
