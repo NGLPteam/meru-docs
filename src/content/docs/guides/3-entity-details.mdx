@@ -9,9 +9,6 @@ import { Steps, Badge, Aside, LinkCard } from "@astrojs/starlight/components";
 
 <LinkCard title="Glossary" href="/reference/glossary" />
 
-## Overview
-
-*This guide walks through how to update details for any entity, such as its hierarchical location, titles, visibility, thumbnail, summary, and publish date.*
 
 ## Access Entity Details
 
@@ -31,13 +28,13 @@ import { Steps, Badge, Aside, LinkCard } from "@astrojs/starlight/components";
 
 1. Find the **Parent** field.
 2. To change the parent of the entity, click on **Change**.
-3. The modal will show a list of sibling-level entities to the current parent. You can either navigate to a higher level using the back arrow **←**, or click on the forward arrow **→** next to it to see its children.
-4. When you've found the correct entity, click on it so that it is highlighted with a blue background and click **Save** at the bottom of the modal.
+3. The modal will show a list of child-level entities to the current parent. You can either navigate to a higher level using the back arrow **←**, or click on the forward arrow **→** next to an item to see its children.
+4. When you've found the new parent entity, click on it so that it is highlighted with a blue background and click **Save** at the bottom of the modal.
 5. Click **Save** at the bottom of the details page.
 
 </Steps>
 
-<Badge text="Note" variant="note" /> _If an entity isn't able to hold child entities, it will not be selectable. You will still be able to click on the right arrow to view its child entities._
+<Badge text="Note" variant="note" /> _Some entities will not be selectable. You will still be able to click on the right arrow to view their child entities._
 
 
 ### Update Titles
@@ -55,20 +52,15 @@ import { Steps, Badge, Aside, LinkCard } from "@astrojs/starlight/components";
 <Steps>
 
 1. Find **Visibility** on the details page.
-</Steps>
 
-<Badge text="Note" variant="note" /> _This is a required field. The default value is **Visible**._
-
-<Steps>
+    <Badge text="Note" variant="note" /> _This is a required field. The default value is **Visible**._
 2. Select the desired visibility level.
 
-</Steps>
 
       - **Visible** will make the entity and its children visible to users.
       - **Hidden** will make the entity and its children invisible to users.
-      - **Limited** will make the entity and its children visible to users during a specified date range. Use the **Visible After** and **Visible Until** date selectors to define the range.
+      - **Limited** will make the entity and its children visible to users during a specified date range. Use the **Visible After** and/or **Visible Until** date selectors to define the range.
 
-<Steps>
 3. Click **Save** at the bottom of the details page.
 </Steps>
 
@@ -78,7 +70,7 @@ import { Steps, Badge, Aside, LinkCard } from "@astrojs/starlight/components";
 <Steps>
 
 1. Find **DOI** on the details page.
-2. <Badge text="Content WIP" variant="caution" /> _Explain DOI here._ 
+2. <Badge text="Content WIP" variant="caution" /> _Explain DOI here._
 3. Click **Save** at the bottom of the details page.
 
 </Steps>
@@ -110,13 +102,13 @@ import { Steps, Badge, Aside, LinkCard } from "@astrojs/starlight/components";
 1. Find the **Published** field on the details page.
 2. Add a year to the **Year** field.
 3. If desired, add **Month** and **Day**.
-4. Click **Save** at the bottom of the details page. 
+4. Click **Save** at the bottom of the details page.
 
 </Steps>
 
 ### Update Schema
 
-<Badge text="Note" variant="note" /> _Schema should be set when the entity is harvested._
+<Badge text="Note" variant="note" /> _Schema is defined when the entity is harvested. See the [Harvesting page](/guides/8-harvesting) for a detailed explanation._
 
 <Steps>
 

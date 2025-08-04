@@ -37,7 +37,7 @@ export default defineConfig({
           label: "Guides",
           // items: [
           //   // Each item here is one entry in the navigation menu.
-          //   { label: "Get Started", slug: "guides/get-started" },
+          //   { label: "Get Started", slug: "guides/1-get-started" },
           //   { label: "Example Guide", slug: "guides/example" },
           // ],
           autogenerate: { directory: "guides" },
